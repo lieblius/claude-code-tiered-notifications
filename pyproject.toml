@@ -1,0 +1,8 @@
+[project]
+name = "claude-code-tiered-notifications"
+version = "1.0.0"
+description = "Smart notification system for Claude Code hooks with delayed push notifications"
+requires-python = ">=3.11"
+dependencies = [
+    "requests>=2.32.4",
+]

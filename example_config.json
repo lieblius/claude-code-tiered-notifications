@@ -1,0 +1,15 @@
+{
+  "enabled_tiers": ["macos", "ntfy"],
+  "default_tier": "macos",
+  "delayed_tiers": ["ntfy"],
+  "delay_seconds": 30,
+  "tier_configs": {
+    "macos": {},
+    "ntfy": {
+      "topic": "your-unique-topic-name",
+      "server": "https://ntfy.sh",
+      "priority": "default",
+      "tags": "computer,claude"
+    }
+  }
+}

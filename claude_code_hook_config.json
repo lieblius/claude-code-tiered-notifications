@@ -1,0 +1,48 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/path/to/claude-code-tiered-notifications/tiered_notifier.py"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/path/to/claude-code-tiered-notifications/tiered_notifier.py"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/path/to/claude-code-tiered-notifications/tiered_notifier.py"
+          }
+        ]
+      }
+    ],
+    "Notification": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/path/to/claude-code-tiered-notifications/tiered_notifier.py"
+          }
+        ]
+      }
+    ]
+  }
+}
