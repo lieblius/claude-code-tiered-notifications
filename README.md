@@ -19,7 +19,7 @@ brew install terminal-notifier
 1. Clone this repository
 2. `uv sync`
 3. Copy `example_config.json` to `~/.claude/notification_config.json` and edit the ntfy topic
-4. Add the hooks to your `~/.claude/settings.json` (see `claude_code_hook_config.json`)
+4. Add the hooks to your `~/.claude/settings.json` (see `claude_code_hook_config.json`) - use the wrapper script path
 5. Install ntfy app on your phone and subscribe to your topic
 
 ## Configuration
@@ -46,6 +46,6 @@ Edit `~/.claude/notification_config.json`:
 ## Testing
 
 ```bash
-echo '{"title": "Test", "message": "Hello!"}' | ./tiered_notifier.py
+echo '{"title": "Test", "message": "Hello!"}' | ./tiered_notifier_wrapper.py
 ```
 

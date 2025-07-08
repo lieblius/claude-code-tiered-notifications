@@ -6,7 +6,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "/path/to/claude-code-tiered-notifications/tiered_notifier.py"
+            "command": "/path/to/claude-code-tiered-notifications/tiered_notifier_wrapper.py"
           }
         ]
       }
@@ -17,7 +17,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "/path/to/claude-code-tiered-notifications/tiered_notifier.py"
+            "command": "/path/to/claude-code-tiered-notifications/tiered_notifier_wrapper.py"
           }
         ]
       }
@@ -28,7 +28,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "/path/to/claude-code-tiered-notifications/tiered_notifier.py"
+            "command": "/path/to/claude-code-tiered-notifications/tiered_notifier_wrapper.py"
           }
         ]
       }
@@ -39,7 +39,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "/path/to/claude-code-tiered-notifications/tiered_notifier.py"
+            "command": "/path/to/claude-code-tiered-notifications/tiered_notifier_wrapper.py"
           }
         ]
       }

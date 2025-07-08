@@ -18,8 +18,10 @@ The system is built around an extensible notification tier architecture:
 
 ## Key Components
 
-### tiered_notifier.py
-Single-file application that:
+### tiered_notifier.py + tiered_notifier_wrapper.py
+Main application (`tiered_notifier.py`) with portable wrapper:
+- **tiered_notifier.py**: Core logic that detects hook types, manages notifications, tracks activity
+- **tiered_notifier_wrapper.py**: Ensures script runs with correct uv environment regardless of current directory
 - Detects hook type (PreToolUse/PostToolUse/Stop vs Notification) from stdin JSON
 - For activity hooks: updates session activity tracker and exits
 - For notification hooks: sends immediate notifications and schedules delayed ones
@@ -48,13 +50,13 @@ Activity is tracked in `~/.claude/session_activity.json` with session IDs and ti
 uv sync
 
 # Test the notification system
-echo '{"title": "Test", "message": "Hello!"}' | ./tiered_notifier.py
+echo '{"title": "Test", "message": "Hello!"}' | ./tiered_notifier_wrapper.py
 
 # Test specific notification tier
-echo '{"title": "Test", "message": "Hello!", "session_id": "test-123"}' | uv run python tiered_notifier.py
+echo '{"title": "Test", "message": "Hello!", "session_id": "test-123"}' | ./tiered_notifier_wrapper.py
 
 # Test activity tracking (should not send notification)
-echo '{"tool_name": "Read", "session_id": "test-123"}' | ./tiered_notifier.py
+echo '{"tool_name": "Read", "session_id": "test-123"}' | ./tiered_notifier_wrapper.py
 ```
 
 ## Important Implementation Details
